@@ -1,15 +1,16 @@
-// App.js - Modern FulBot Showcase
 import React, { useState, useEffect } from "react";
-import "./App.css"; // Custom CSS for styling
-import { motion } from "framer-motion"; // Animation library
-import InteractiveGrid from "./components/InteractiveGrid";
-import ResearchVisualization from "./components/ResearchVisualization";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "./App.css";
+import { motion } from "framer-motion";
+
 import HeroSection from "./components/HeroSection";
 import AwardsSection from "./components/AwardsSection";
 import SystemArchitecture from "./components/SystemArchitecture";
-import PeopleSection from "./components/PeopleSection";
 
-import ThanhLong from "../src/images/ThanhLong.jpg"
+import ResearchPage from "./pages/ResearchPage";
+import DemonstrationPage from "./pages/DemonstrationPage";
+import AboutUsPage from "./pages/AboutUsPage";
+import PeopleSection from "./components/PeopleSection";
 
 function App() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -24,54 +25,43 @@ function App() {
     }, []);
 
     return (
-        <div className="fulbot-website">
-            {/* Navigation */}
-            <nav className={`main-nav ${isScrolled ? "scrolled" : ""}`}>
-                <div className="logo">FulBot</div>
-                <ul className="nav-links">
-                    <li><a href="#overview">Overview</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#demonstration">Demonstration</a></li>
-                    <li><a href="#people">People</a></li>
-                </ul>
-            </nav>
+        <div>
+            <Router>
+                <div className="fulbot-website">
+                    {/* Navigation */}
+                    <nav className={`main-nav ${isScrolled ? "scrolled" : ""}`}>
+                        <div className="logo">FulBot</div>
+                        <ul className="nav-links">
+                            <li><Link to="/research">Research</Link></li>
+                            <li><Link to="/demonstration">Demonstration</Link></li>
+                            <li><Link to="/people">People</Link></li>
+                        </ul>
+                    </nav>
 
-            {/* Hero Section with Video */}
-            <HeroSection />
+                    <Routes>
+                        <Route path="/" element={
+                            <>
+                                {/* Hero Section */}
+                                <HeroSection />
 
-            {/* Overview Section */}
-            <section id="overview" className="overview">
-                <SystemArchitecture />
-            </section>
+                                {/* Overview Section */}
+                                <section id="overview" className="overview">
+                                    <SystemArchitecture />
+                                </section>
 
-            {/* Research Section with Interactive Visualization */}
-            <section id="research" className="research">
-                <h2>Research & Development</h2>
-                <ResearchVisualization />
-            </section>
+                                {/* Awards Section */}
+                                <AwardsSection />
 
-            {/* Demonstration Section */}
-            <section id="demonstration" className="features">
-                <h2>Live Demonstration</h2>
-                <p>Watch FulBot in action navigating and interacting in real-world scenarios.</p>
+                                <PeopleSection/>
+                            </>
+                        } />
 
-                {/*/!* Video Showcase *!/*/}
-                {/*<motion.div className="video-showcase" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>*/}
-                {/*    <video autoPlay loop muted className="demo-video">*/}
-                {/*        <source src="path-to-robot-demo.mp4" type="video/mp4" />*/}
-                {/*    </video>*/}
-                {/*</motion.div>*/}
-
-                <InteractiveGrid />
-            </section>
-
-            {/* Awards & Recognition */}
-            <AwardsSection />
-
-            {/* People Section */}
-            <section id="people" className="people">
-                <PeopleSection />
-            </section>
+                        <Route path="/research" element={<ResearchPage />} />
+                        <Route path="/demonstration" element={<DemonstrationPage />} />
+                        <Route path="/people" element={<AboutUsPage />} />
+                    </Routes>
+                </div>
+            </Router>
         </div>
     );
 }

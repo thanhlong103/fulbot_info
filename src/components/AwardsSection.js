@@ -1,7 +1,8 @@
 // src/components/AwardsSection.js
 import React from "react";
 import { motion } from "framer-motion";
-import "./AwardsSection.css"; // Optional: Add custom styling
+import "./AwardsSection.css";
+import {Typography} from "@mui/material"; // Optional: Add custom styling
 
 const AwardsSection = () => {
     return (
@@ -11,7 +12,9 @@ const AwardsSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                Awards & Recognition 🏆
+                <Typography variant="h4" fontWeight="bold" gutterBottom>
+                    🏆 Awards & Recognition
+                </Typography>
             </motion.h2>
 
             <div className="awards-container">

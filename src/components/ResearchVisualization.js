@@ -23,7 +23,7 @@ function ResearchVisualization() {
 
     return (
         <div className="research-container">
-            <h2 className="research-title">Research Contributions to Fulbot</h2>
+            <h2 className="research-title">Research Contributions to FulBot</h2>
 
             <div className="filter-container">
                 <input

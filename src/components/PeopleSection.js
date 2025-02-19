@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { LinkedIn, GitHub } from "@mui/icons-material";
 
 import ThanhLong from "../images/ThanhLong.jpg"
+import DuongPhung from "../images/DuongPhung.jpg"
 
 // Sample team data
 const teamMembers = [
@@ -30,8 +31,8 @@ const teamMembers = [
     },
     {
         name: "Phung Manh Duong",
-        role: "Robotics Engineer",
-        image: "/images/emily.jpg",
+        role: "Ph.D - Instructor",
+        image: DuongPhung,
         linkedin: "https://linkedin.com/in/emilydavis",
         github: "https://github.com/emilydavis"
     }
