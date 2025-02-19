@@ -1,0 +1,16 @@
+/* Fulbot3DModel.css */
+canvas {
+    width: 100% !important;
+    height: 600px !important;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #ffffff, #f8f9fa);
+    margin: 4rem 0;
+}
+
+/* Add orbit controls styling */
+.react-transform-wrapper {
+    touch-action: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
