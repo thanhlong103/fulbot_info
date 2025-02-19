@@ -5,23 +5,28 @@ import { motion } from "framer-motion";
 
 export default function People() {
     return (
-        <Container maxWidth="lg" sx={{ py: 8 }}>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
-                <PeopleSection />
+        <Container maxWidth="lg" sx={{py: 8}}>
+            <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1.2}}>
+                <Typography variant="h4" align="center" gutterBottom fontWeight="bold">
+                    About FulBot
+                </Typography>
+            </motion.div>
+            <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1.2}}>
+                <PeopleSection/>
             </motion.div>
 
             <Grow in timeout={1000}>
-                <Box textAlign="center" mt={8} p={4} bgcolor="#f5f5f5" borderRadius={3} boxShadow={3}>
+                <Box textAlign="center" mt={8} p={4} bgcolor="#ceedf6" borderRadius={3} boxShadow={3}>
                     <Typography variant="h4" fontWeight="bold" color="primary.main">Join Our Team</Typography>
                     <Typography variant="body1" color="text.secondary" mt={2}>
-                        We’re always looking for passionate individuals to contribute to FulBot.
+                        We’re always looking for passionate students to contribute to FulBot.
                     </Typography>
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                    <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.95}}>
                         <Button
                             variant="contained"
                             color="primary"
-                            sx={{ mt: 3, px: 4, py: 1.5, fontSize: "1rem" }}
-                            onClick={() => window.location.href = 'mailto:contact@fulbot.com'}
+                            sx={{mt: 3, px: 4, py: 1.5, fontSize: "1rem"}}
+                            onClick={() => window.location.href = 'mailto:long.nguyen.210085@student.fulbright.edu.vn'}
                         >
                             Contact Us
                         </Button>

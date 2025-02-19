@@ -5,6 +5,7 @@ import { LinkedIn, GitHub } from "@mui/icons-material";
 
 import ThanhLong from "../images/ThanhLong.jpg"
 import DuongPhung from "../images/DuongPhung.jpg"
+import DucPhu from "../images/DucPhu.png"
 
 // Sample team data
 const teamMembers = [
@@ -18,7 +19,7 @@ const teamMembers = [
     {
         name: "Nguyen Duc Phu",
         role: "Co24 - Developer",
-        image: "/images/jane.jpg",
+        image: DucPhu,
         linkedin: "https://linkedin.com/in/janesmith",
         github: "https://github.com/janesmith"
     },

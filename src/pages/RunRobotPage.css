@@ -1,0 +1,86 @@
+/* Fullscreen Container */
+.run-robot-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0d1117; /* Dark futuristic theme */
+    color: white;
+    text-align: center;
+}
+
+/* Title Styling */
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Grid Layout for Buttons */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 97%;
+    height: 80%
+}
+
+/* Button Styling */
+.robot-button {
+    width: 100%;
+    padding: 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+/* Individual Button Colors */
+.home { background: rgba(30, 136, 229, 0.8); }  /* Blue */
+.lidar { background: rgba(211, 47, 47, 0.8); }  /* Red */
+.move  { background: rgba(67, 160, 71, 0.8); }  /* Green */
+.guide { background: rgba(255, 160, 0, 0.8); }  /* Orange */
+
+/* Hover Effects */
+.robot-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Button Active (Click) Effect */
+.robot-button:active {
+    transform: scale(0.95);
+}
+
+/* Home Icon at the Top Right */
+.home-icon {
+    position: absolute;
+    top: 20px;  /* Adjust top spacing */
+    right: 30px; /* Ensure it's at the right */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex; /* Ensure icon is centered inside */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjust Hover Effect */
+.home-icon:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}

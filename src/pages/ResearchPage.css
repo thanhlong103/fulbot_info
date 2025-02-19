@@ -4,13 +4,14 @@
     text-align: center;
     background: #f4f7fc;
     min-height: 100vh;
+    margin-top: 10vh;
 }
 
 /* Header */
 .research-header {
     margin-bottom: 3rem;
     text-align: center;
-}00
+}
 
 .title {
     font-size: 3rem;

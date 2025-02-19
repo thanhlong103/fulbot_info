@@ -111,7 +111,6 @@ const ResearchPage = () => {
                 animate={{opacity: 1}}
                 transition={{duration: 0.8, delay: 0.9 }}
             >
-                <h2 className="section-title"></h2>
                 <ResearchVisualization />
             </motion.div>
         </div>
