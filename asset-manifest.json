@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/FulBot/static/css/main.657e3e0f.css",
+    "main.js": "/FulBot/static/js/main.10c7de99.js",
+    "static/js/453.4ed51330.chunk.js": "/FulBot/static/js/453.4ed51330.chunk.js",
+    "static/media/robot_web.png": "/FulBot/static/media/robot_web.100b41f6728aeefa7603.png",
+    "static/media/ThanhLong.jpg": "/FulBot/static/media/ThanhLong.c8e7679ba92393070e49.jpg",
+    "index.html": "/FulBot/index.html",
+    "main.657e3e0f.css.map": "/FulBot/static/css/main.657e3e0f.css.map",
+    "main.10c7de99.js.map": "/FulBot/static/js/main.10c7de99.js.map",
+    "453.4ed51330.chunk.js.map": "/FulBot/static/js/453.4ed51330.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.657e3e0f.css",
+    "static/js/main.10c7de99.js"
+  ]
+}
