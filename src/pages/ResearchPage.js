@@ -49,7 +49,7 @@ const ResearchPage = () => {
                     <Card className="interest-card">
                         <FaProjectDiagram className="icon" />
                         <CardContent>
-                            <h3>Group Activity Recognition</h3>
+                            <h3>Group Interaction Recognition</h3>
                             <p>Exploring GNNs to detect group behaviors.</p>
                         </CardContent>
                     </Card>

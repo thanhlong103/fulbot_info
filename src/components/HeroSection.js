@@ -8,8 +8,7 @@ function HeroSection() {
             <div className="hero-content">
                 <h1>FulBot: A Socially Aware Service Robot</h1>
                 <p className="tagline">
-                    Redefining human-robot collaboration through adaptive AI and Motion
-                    Planning Framework
+                    Redefining human-robot collaboration through adaptive AI and Motion Planning Framework
                 </p>
                 <button className="cta">Contact us</button>
             </div>

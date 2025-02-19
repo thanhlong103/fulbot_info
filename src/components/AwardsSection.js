@@ -20,11 +20,11 @@ const AwardsSection = () => {
             <div className="awards-container">
                 <div className="award-card">
                     <h3>🏅 Best Paper Award</h3>
-                    <p>ICCRI 2024 – Recognized for excellence in **Socially Aware Obstacle Avoidance**.</p>
+                    <p>ICCRI 2024</p>
                 </div>
                 <div className="award-card">
-                    <h3>🚀 Robotics Innovation Grant</h3>
-                    <p>Supported by **XYZ Research Foundation** for its breakthrough in **Human-Robot Interaction**.</p>
+                    <h3>🚀 Scholarships & Grants</h3>
+                    <p>Supported by IDP grant and TP-bank scholarship.</p>
                 </div>
             </div>
         </section>

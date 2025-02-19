@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import HeroSection from "./components/HeroSection";
 import AwardsSection from "./components/AwardsSection";
@@ -25,19 +25,19 @@ function App() {
     }, []);
 
     return (
-        <div>
+        <div className="fulbot-website">
             <Router>
-                <div className="fulbot-website">
-                    {/* Navigation */}
-                    <nav className={`main-nav ${isScrolled ? "scrolled" : ""}`}>
-                        <div className="logo">FulBot</div>
-                        <ul className="nav-links">
-                            <li><Link to="/research">Research</Link></li>
-                            <li><Link to="/demonstration">Demonstration</Link></li>
-                            <li><Link to="/people">People</Link></li>
-                        </ul>
-                    </nav>
+                {/* Navigation */}
+                <nav className={`main-nav ${isScrolled ? "scrolled" : ""}`}>
+                    <motion.div className="logo" whileHover={{ scale: 1.1 }}>FulBot</motion.div>
+                    <ul className="nav-links">
+                        <motion.li whileHover={{ scale: 1.1 }}><Link to="/research">Research</Link></motion.li>
+                        <motion.li whileHover={{ scale: 1.1 }}><Link to="/demonstration">Demonstration</Link></motion.li>
+                        <motion.li whileHover={{ scale: 1.1 }}><Link to="/people">People</Link></motion.li>
+                    </ul>
+                </nav>
 
+                <AnimatePresence>
                     <Routes>
                         <Route path="/" element={
                             <>
@@ -45,14 +45,21 @@ function App() {
                                 <HeroSection />
 
                                 {/* Overview Section */}
-                                <section id="overview" className="overview">
+                                <motion.section
+                                    id="overview"
+                                    className="overview"
+                                    initial={{ opacity: 0, y: 50 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5 }}
+                                >
                                     <SystemArchitecture />
-                                </section>
+                                </motion.section>
 
                                 {/* Awards Section */}
                                 <AwardsSection />
 
-                                <PeopleSection/>
+                                {/* People Section */}
+                                <PeopleSection />
                             </>
                         } />
 
@@ -60,7 +67,7 @@ function App() {
                         <Route path="/demonstration" element={<DemonstrationPage />} />
                         <Route path="/people" element={<AboutUsPage />} />
                     </Routes>
-                </div>
+                </AnimatePresence>
             </Router>
         </div>
     );
