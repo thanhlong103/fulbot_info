@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Integrating Multimodal Sensing and Adaptive Path Planning: A Framework for Socially Aware Robots to Recognize Human Activities and Group Dynamics",
+    "author": "Thanh Long Nguyen, Duc Phu Nguyen, Thanh Thao Ton Nu, Duong Manh Phung",
+    "year": 2025,
+    "category": "Motion Planning",
+    "link": "#"
+  },
+  {
+    "title": "Real-time Recognition of Human Group Interaction for Socially Aware Robot Navigation ",
+    "author": "Thanh Long Nguyen, Duc Phu Nguyen, Thanh Thao Ton Nu, Duong Manh Phung",
+    "year": 2025,
+    "category": "Group Detection",
+    "link": "#"
+  },
+  {
+    "title": "Socially Aware Motion Planning for Service Robots Using LiDAR and RGB-D Camera",
+    "author": "Duc Phu Nguyen, Thanh Long Nguyen, Duong Manh Phung",
+    "year": 2024,
+    "category": "Motion Planning",
+    "link": "#"
+  }
+]
