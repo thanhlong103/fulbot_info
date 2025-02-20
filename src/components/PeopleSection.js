@@ -6,6 +6,7 @@ import { LinkedIn, GitHub } from "@mui/icons-material";
 import ThanhLong from "../images/ThanhLong.jpg"
 import DuongPhung from "../images/DuongPhung.jpg"
 import DucPhu from "../images/DucPhu.png"
+import TonThao from "../images/TonThao.jpg"
 
 // Sample team data
 const teamMembers = [
@@ -20,15 +21,15 @@ const teamMembers = [
         name: "Nguyen Duc Phu",
         role: "Co24 - Developer",
         image: DucPhu,
-        linkedin: "https://linkedin.com/in/janesmith",
-        github: "https://github.com/janesmith"
+        linkedin: "https://www.linkedin.com/in/ph%C3%BA-%C4%91%E1%BB%A9c-nguy%E1%BB%85n-39b7781a5/",
+        github: "https://github.com/phunguyenduc28"
     },
     {
         name: "Ton Nu Thanh Thao",
         role: "Co27 - Developing Assistant",
-        image: "/images/emily.jpg",
-        linkedin: "https://linkedin.com/in/emilydavis",
-        github: "https://github.com/emilydavis"
+        image: TonThao,
+        linkedin: "https://www.linkedin.com/in/ton-nu-thanh-thao-b58b4924a/",
+        github: "https://github.com/thaoton1910"
     },
     {
         name: "Phung Manh Duong",

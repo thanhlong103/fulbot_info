@@ -9,9 +9,12 @@ const RunRobotPage = () => {
 
     return (
         <div>
+            {/* Home Button */}
             <IconButton className="home-icon" onClick={() => navigate("/")}>
                 <HomeIcon style={{ fontSize: 40, color: "#fff" }} />
             </IconButton>
+
+            {/* Main UI */}
             <Box className="run-robot-container">
                 {/* Title */}
                 <Typography variant="h2" className="title">
@@ -28,12 +31,12 @@ const RunRobotPage = () => {
                         📡 LiDAR Stream
                     </button>
 
-                    <button className="robot-button move" onClick={() => navigate("/move-to-destination")}>
+                    <button className="robot-button move" onClick={() => navigate("/run-robot/move-to-destination")}>
                         📍 Move to Destination
                     </button>
 
                     <button className="robot-button guide" onClick={() => console.log("Starting Makerspace Guide")}>
-                        🏭 Makerspace Guide
+                    🏭 Makerspace Guide
                     </button>
                 </Box>
             </Box>

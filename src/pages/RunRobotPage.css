@@ -68,8 +68,7 @@
 /* Home Icon at the Top Right */
 .home-icon {
     position: absolute;
-    top: 20px;  /* Adjust top spacing */
-    right: 30px; /* Ensure it's at the right */
+    top: 100px;  /* Adjust top spacing */
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     padding: 10px;

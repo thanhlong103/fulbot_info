@@ -1,0 +1,223 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background: #0a0e14;
+    color: #ffffff;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    height: 100vh;
+    background: #0a0e14;
+}
+
+/* Control Panel */
+.control-panel {
+    width: 40%;
+    height: 100%;
+    padding: 24px;
+    background: #1a1f29 !important;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.panel-title {
+    font-size: 1.4rem !important;
+    color: #6ae3fe !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Status Section */
+.status-section {
+    background: #252d3a;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.status-title {
+    color: #6ae3fe !important;
+    margin-bottom: 12px !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.battery-bar {
+    height: 8px !important;
+    border-radius: 4px;
+    margin: 12px 0;
+    background: #2d3746 !important;
+}
+
+.battery-bar > div {
+    background: #6ae3fe !important;
+}
+
+.status-text {
+    color: #8b95a1 !important;
+    font-size: 0.9rem !important;
+}
+
+/* Goal Section */
+.goal-section {
+    background: #252d3a;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.section-title {
+    color: #6ae3fe !important;
+    margin-bottom: 12px !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.history-item {
+    background: #1a1f29 !important;
+    color: #8b95a1 !important;
+    padding: 8px 12px !important;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.history-item:hover {
+    background: #2d3746 !important;
+    transform: translateX(4px);
+}
+
+.current-goal {
+    background: #252d3a;
+    padding: 16px;
+    border-radius: 8px;
+    color: #6ae3fe;
+    font-weight: 500;
+    text-align: center;
+    margin-top: auto;
+}
+
+.send-button {
+    background: linear-gradient(45deg, #6ae3fe, #4a90e2) !important;
+    color: #0a0e14 !important;
+    font-weight: bold !important;
+    padding: 14px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s !important;
+}
+
+.send-button:disabled {
+    opacity: 0.7;
+    background: #2d3746 !important;
+}
+
+/* Map Container */
+.map-container {
+    width: 60%;
+    height: 100vh;
+    position: relative;
+    background: #151a22;
+    overflow: hidden;
+}
+
+.map-toolbar {
+    position: absolute;
+    top:12%;
+    left: 2%;
+    z-index: 100;
+    background: rgba(26, 31, 41, 0.9);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.zoom-level {
+    color: #8b95a1;
+    margin-left: 8px;
+}
+
+.map-wrapper:active {
+    cursor: grabbing;
+}
+
+.goal-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #6ae3fe;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(106, 227, 254, 0.5);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.2); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.divider {
+    background: #2d3746 !important;
+    margin: 16px 0 !important;
+}
+
+/* Add these new styles */
+.map-wrapper {
+    position: relative;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}
+
+.map-image {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.goal-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #6ae3fe;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(106, 227, 254, 0.5);
+    pointer-events: none;
+}
+
+/* Update the map container to prevent overflow */
+.map-container {
+    width: 60%;
+    height: 100vh;
+    position: relative;
+    background: #151a22;
+    overflow: hidden;
+    touch-action: none;
+}

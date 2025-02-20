@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import "./DemonstrationPage.css";
 
 function DemonstrationPage() {
     const [robotStatus, setRobotStatus] = useState("Idle");
-    const [metrics, setMetrics] = useState({
+    const [metrics] = useState({
         accuracy: 95,
         efficiency: 88,
         successRate: 92,
