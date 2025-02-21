@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Nguyen Thanh Long",
+        "role": "Robotics Developer, Web Developer",
+        "bio": "Co25 Student",
+        "image": "/images/ThanhLong.jpg",
+        "links": {
+            "linkedin": "https://www.linkedin.com/in/thanhlong103/",
+            "github": "https://github.com/thanhlong103"
+        }
+    },
+    {
+        "name": "Duc Phu",
+        "role": "Robotics Developer",
+        "bio": "Co24 Student",
+        "image": "/images/DucPhu.png",
+        "links": {
+            "linkedin": "https://www.linkedin.com/in/ph%C3%BA-%C4%91%E1%BB%A9c-nguy%E1%BB%85n-39b7781a5/",
+            "github": "https://github.com/phunguyenduc28"
+        }
+    },
+    {
+        "name": "Ton Nu Thanh Thao",
+        "role": "Research Assistant",
+        "bio": "Co27 Student",
+        "image": "/images/TonThao.jpg",
+        "links": {
+            "linkedin": "https://www.linkedin.com/in/ton-nu-thanh-thao-b58b4924a/",
+            "github": "https://github.com/thaoton1910"
+        }
+    },
+    {
+        "name": "Phung Manh Duong",
+        "role": "Instructor",
+        "bio": "Senior Faculty of Human-Centered Engineering",
+        "image": "/images/DuongPhung.jpg",
+        "links": {
+            "linkedin": "#",
+            "github": "#"
+        }
+    }
+]

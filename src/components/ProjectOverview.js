@@ -25,11 +25,9 @@ const ProjectOverview = () => {
             }}>
                 Our Team Overview
             </Typography>
-            <Typography variant="body1" sx={{ maxWidth: "800px", margin: "0 auto", lineHeight: "1.8", fontSize: "1.1rem" }}>
-                Felix is a cutting-edge service robot designed to assist in various environments, from hospitals to offices. 
-                Our robot leverages advanced AI algorithms for human activity recognition and real-time navigation, 
-                ensuring seamless interaction and efficient task execution. With a focus on social awareness, FulBot 
-                is redefining the future of human-robot collaboration.
+            <Typography variant="body1" sx={{ maxWidth: "1200px", margin: "0 auto", lineHeight: "1.8", fontSize: "1.4rem" }}>
+                FulBot is a student-led robotics research group at Fulbright University Vietnam, exploring human-robot interaction and autonomous navigation in dynamic environments. Under Ph.D. supervision, we leverage computer vision, deep learning, and motion planning to develop intelligent robotic systems. 
+                Beyond research, we’re building a thriving robotics community, fostering innovation, and shaping the future of HRI.
             </Typography>
         </Box>
     );

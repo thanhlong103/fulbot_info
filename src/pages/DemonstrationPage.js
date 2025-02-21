@@ -9,7 +9,8 @@ const DemonstrationPage = () => {
             minHeight: "100vh",
             background: "linear-gradient(180deg, #1a1f2c 0%, #0a0e17 100%)",
             color: "white",
-            padding: "80px 20px"
+            padding: "80px 20px",
+            marginTop: "4%"
         }}>
             <Typography variant="h2" sx={{
                 textAlign: "center",
@@ -82,6 +83,7 @@ const DemonstrationPage = () => {
                                 marginBottom: "20px"
                             }}>
                                 <iframe
+                                    title="Demo"
                                     style={{
                                         position: "absolute",
                                         top: 0,

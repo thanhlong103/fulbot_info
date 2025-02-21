@@ -26,14 +26,14 @@ const FeaturesSection = () => {
                     margin: "20px auto"
                 }
             }}>
-                Key Features
+                Solix's Key Features
             </Typography>
             <Grid container spacing={4} justifyContent="center">
                 {[
                     {
                         icon: <SensorsIcon sx={{ fontSize: 50 }} />,
                         title: "AI-Powered Perception",
-                        content: "Utilizing MoveNet for pose estimation and LSTM for human activity recognition."
+                        content: "Utilizing MoveNet for pose estimation and CNN+LSTM for human activity recognition."
                     },
                     {
                         icon: <TravelExploreIcon sx={{ fontSize: 50 }} />,

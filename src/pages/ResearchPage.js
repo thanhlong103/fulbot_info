@@ -1,18 +1,27 @@
 import React from "react";
-import { Box, Typography, Grid, Paper, Link, Card, CardContent } from "@mui/material";
+import { Box, Typography, Grid, Paper, Card, CardContent, Stepper, Step, StepLabel } from "@mui/material";
 import { motion } from "framer-motion";
 import { FaRobot, FaBrain, FaProjectDiagram, FaSearch } from "react-icons/fa";
 import ScienceIcon from "@mui/icons-material/Science";
 import CodeIcon from "@mui/icons-material/Code";
-import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import ResearchVisualization from "../components/ResearchVisualization";
 import "./ResearchPage.css";
 import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { useState, useEffect } from "react";
 
 
 const ResearchPage = () => {
-    const techStack = ["ROS2", "TensorFlow", "TensorRT", "OpenCV", "Gazebo", "Docker"];
+    const techStack = ["ROS/ROS2", "TensorFlow", "TensorRT", "OpenCV", "Gazebo Simulation", "Docker"];
+    const [timelineEvents, setTimelineEvents] = useState([]);
+
+    useEffect(() => {
+        // Dynamically fetch the JSON data
+        fetch("/data/timelineData.json")
+            .then((response) => response.json())
+            .then((data) => setTimelineEvents(data))
+            .catch((error) => console.error("Error loading timeline data:", error));
+    }, []);
     return (
         <Box sx={{
             minHeight: "100vh",
@@ -62,15 +71,34 @@ const ResearchPage = () => {
             </Grid>
 
             {/* Research Timeline */}
-            <Typography variant="h3" sx={{ textAlign: "center", mt: 6, mb: 4, fontWeight: "bold" }}>
-                📅 Research Timeline
-            </Typography>
-            <Box sx={{ padding: "0 10%" }}>
-                <ul className="timeline">
-                    {["2024: Interest in socially aware path planning.", "7/2024: Best paper award at ICCRI 2024.", "9/2024: Expanding into social navigation.", "12/2024: Trained first LSTM model.", "2/2025: Implemented group social interaction model."].map((event, index) => (
-                        <li key={index} className="timeline-event">{event}</li>
+            <Box sx={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", mt: 6 }}>
+                <Typography variant="h3" sx={{ mb: 4, fontWeight: "bold", textAlign: "center" }}>
+                    📅 Research Timeline
+                </Typography>
+                <Stepper alternativeLabel>
+                    {timelineEvents.map((event, index) => (
+                        <Step key={index}>
+                            <StepLabel>
+                                <Paper
+                                    sx={{
+                                        padding: "10px",
+                                        background: "rgba(0, 114, 255, 0.2)",
+                                        borderRadius: "10px",
+                                        color: "white",
+                                        textAlign: "center",
+                                        minWidth: "120px",
+                                        boxShadow: "0 5px 15px rgba(0, 198, 255, 0.3)",
+                                    }}
+                                >
+                                    <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                                        {event.year}
+                                    </Typography>
+                                    <Typography variant="body2">{event.description}</Typography>
+                                </Paper>
+                            </StepLabel>
+                        </Step>
                     ))}
-                </ul>
+                </Stepper>
             </Box>
 
             {/* Research Technical Stack & Innovations */}

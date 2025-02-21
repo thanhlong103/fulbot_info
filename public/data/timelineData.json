@@ -1,0 +1,31 @@
+[
+    {
+      "year": "10/2023",
+      "description": "FulBot founded by Long and Phu"
+    },
+    {
+        "year": "1/2024",
+        "description": "Proposed first research topic and achieved TP-Bank STEM Scholarship"
+    },
+    {
+        "year": "4/2024",
+        "description": "Implemented first version of social navigation using fused-data from RGB-D camera and LiDar"
+    },
+    {
+      "year": "07/2024",
+      "description": "Best paper award at ICCRI 2024."
+    },
+    {
+      "year": "09/2024",
+      "description": "Started expanding into multi-people social navigation."
+    },
+    {
+      "year": "12/2024",
+      "description": "Finish CNN+LSTM modek to recognize human activities"
+    },
+    {
+      "year": "02/2025",
+      "description": "Implemented group social interaction model and submitted a journal article."
+    }
+  ]
+  

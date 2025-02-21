@@ -1,59 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Box, Typography, Grid, Avatar, Link } from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-import ThanhLong from "../images/ThanhLong.jpg"
-import DucPhu from "../images/DucPhu.png"
-import TonThao from "../images/TonThao.jpg"
-import DuongPhung from "../images/DuongPhung.jpg"
-import { LocationSearching } from "@mui/icons-material";
-
-const teamMembers = [
-    {
-        name: "Nguyen Thanh Long",
-        role: "Robotics Developer, Web Developer",
-        bio: "Machine Learning expert focusing on computer vision and activity recognition systems. MSc in Artificial Intelligence.",
-        image: ThanhLong,
-        links: {
-            linkedin: "https://www.linkedin.com/in/thanhlong103/",
-            github: "https://github.com/thanhlong103"
-        }
-    },
-    {
-        name: "Duc Phu",
-        role: "Robotics Developer",
-        bio: "Machine Learning expert focusing on computer vision and activity recognition systems. MSc in Artificial Intelligence.",
-        image: DucPhu,
-        links: {
-            linkedin: "https://www.linkedin.com/in/ph%C3%BA-%C4%91%E1%BB%A9c-nguy%E1%BB%85n-39b7781a5/",
-            github: "https://github.com/phunguyenduc28"
-        }
-    },
-    {
-        name: "Ton Nu Thanh Thao",
-        role: "Research Assistant",
-        bio: "Machine Learning expert focusing on computer vision and activity recognition systems. MSc in Artificial Intelligence.",
-        image: TonThao,
-        links: {
-            linkedin: "https://www.linkedin.com/in/ton-nu-thanh-thao-b58b4924a/",
-            github: "https://github.com/thaoton1910"
-        }
-    },
-    {
-        name: "Phung Manh Duong",
-        role: "Intructor",
-        bio: "Machine Learning expert focusing on computer vision and activity recognition systems. MSc in Artificial Intelligence.",
-        image: DuongPhung,
-        links: {
-            linkedin: "#",
-            github: "#"
-        }
-    },
-];
-
 const PeopleSection = () => {
+    const [teamMembers, setTeamMembers] = useState([]);
+
+    useEffect(() => {
+        fetch("/data/member.json")
+            .then((response) => response.json())
+            .then((data) => setTeamMembers(data))
+            .catch((error) => console.error("Error loading team data:", error));
+    }, []);
+
     return (
         <Box sx={{
             padding: "80px 20px",

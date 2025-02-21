@@ -1,8 +1,6 @@
 import React from "react";
-import { Container, Typography, Button, Box, Grid, Avatar, Link } from "@mui/material";
+import { Container, Typography, Button, Box} from "@mui/material";
 import { motion } from "framer-motion";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import PeopleSection from "../components/PeopleSection";
 
 export default function People() {
@@ -18,6 +16,22 @@ export default function People() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
           <Typography variant="h3" align="center" fontWeight="bold" gutterBottom>
             About FulBot
+          </Typography>
+          <Typography align="center" fontSize={25} gutterBottom>
+            FulBot is a student-led research group at Fulbright University Vietnam, supervised by a Ph.D. instructor, 
+            dedicated to exploring human-robot interaction (HRI) and autonomous robot navigation in dynamic environments. 
+            Our mission is to advance robotics research through collaboration, innovation, and hands-on experimentation.
+          </Typography>
+          <Typography align="center" fontSize={25} gutterBottom>
+            We focus on key areas such as socially aware motion planning, human activity recognition, and sensor fusion 
+            for real-world robotic applications. By integrating techniques in computer vision, deep learning, and control systems, 
+            we develop intelligent robotic systems capable of adapting to complex environments.
+            Beyond research, FulBot aims to foster a vibrant robotics community at Fulbright University Vietnam. 
+          </Typography>
+          <Typography align="center" fontSize={25} gutterBottom>
+            We actively support each other in learning new robotics techniques, sharing insights, and conducting impactful research. 
+            Our goal is to create a platform where students can engage in cutting-edge robotics projects, contribute to academic advancements, 
+            and inspire future innovators in the field.
           </Typography>
         </motion.div>
 
