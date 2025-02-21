@@ -5,9 +5,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
-  margin-top: 80px;
+  margin-top: 4%;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
 }
 
 .hero-content {
@@ -20,19 +22,19 @@
   font-size: 4rem;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  background: linear-gradient(30deg, #2d3436, #0066ff);
+  background: linear-gradient(30deg, #ff9a9e, #fad0c4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .tagline {
   font-size: 1.5rem;
-  color: #636e72;
+  color: #a8e6cf;
   margin-bottom: 2.5rem;
 }
 
 .cta {
-  background: linear-gradient(45deg, #0066ff, #00a8ff);
+  background: linear-gradient(45deg, #ff6f61, #ffcc5c);
   color: white;
   padding: 1rem 2.5rem;
   border-radius: 50px;
@@ -40,12 +42,12 @@
   font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 104, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(255, 111, 97, 0.3);
 }
 
 .cta:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 104, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 111, 97, 0.4);
 }
 
 .hero-background {
@@ -53,7 +55,7 @@
   right: 0;
   width: 50%;
   height: 100%;
-  background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
@@ -62,7 +64,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 97%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -181,4 +183,26 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
+}
+
+/* Add to App.css */
+.project-overview {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #1a1f2c 0%, #0a0e17 100%);
+  color: white;
+  text-align: center;
+}
+
+.features-section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #0a0e17 0%, #1a1f2c 100%);
+  color: white;
+  text-align: center;
+}
+
+.testimonials-section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #1a1f2c 0%, #0a0e17 100%);
+  color: white;
+  text-align: center;
 }

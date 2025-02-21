@@ -1,34 +1,65 @@
-// src/components/AwardsSection.js
 import React from "react";
 import { motion } from "framer-motion";
+import { Typography } from "@mui/material";
 import "./AwardsSection.css";
-import {Typography} from "@mui/material"; // Optional: Add custom styling
 
-const AwardsSection = () => {
+const AwardSection = () => {
     return (
         <section className="awards-section">
-            <motion.h2
+            <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
             >
-                <Typography variant="h4" fontWeight="bold" gutterBottom>
-                    🏆 Awards & Recognition
+                <Typography variant="h3" sx={{
+                    textAlign: "center",
+                    mb: 8,
+                    color: "white",
+                    fontWeight: "bold",
+                    "&::after": {
+                        content: '""',
+                        display: "block",
+                        width: "60px",
+                        height: "4px",
+                        background: "#0072ff",
+                        margin: "20px auto"
+                    }
+                }}>
+                    Awards & Recognition
                 </Typography>
-            </motion.h2>
+            </motion.div>
 
             <div className="awards-container">
-                <div className="award-card">
-                    <h3>🏅 Best Paper Award</h3>
-                    <p>ICCRI 2024</p>
-                </div>
-                <div className="award-card">
-                    <h3>🚀 Scholarships & Grants</h3>
-                    <p>Supported by IDP grant and TP-bank scholarship.</p>
-                </div>
+                {[
+                    {
+                        title: "Best Paper Award",
+                        subtitle: "ICCRI 2024",
+                        icon: "🏆"
+                    },
+                    {
+                        title: "Scholarships & Grants",
+                        subtitle: "Supported by IDP grant and TP-bank scholarship",
+                        icon: "🚀"
+                    }
+                ].map((award, index) => (
+                    <motion.div
+                        key={index}
+                        className="award-card"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                    >
+                        <div className="award-icon">{award.icon}</div>
+                        <h3>{award.title}</h3>
+                        <p>{award.subtitle}</p>
+                        <div className="award-glow"></div>
+                    </motion.div>
+                ))}
             </div>
         </section>
     );
 };
 
-export default AwardsSection;
+export default AwardSection;

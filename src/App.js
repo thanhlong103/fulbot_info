@@ -1,3 +1,4 @@
+// App.js
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation } from "react-router-dom";
 import "./App.css";
@@ -6,14 +7,18 @@ import { Button } from "@mui/material";
 
 import HeroSection from "./components/HeroSection";
 import AwardsSection from "./components/AwardsSection";
-import SystemArchitecture from "./components/SystemArchitecture";
+import ProjectOverview from "./components/ProjectOverview";
+import FeaturesSection from "./components/FeaturesSection";
+import TestimonialsSection from "./components/TestimonialsSection";
+import Footer from "./components/Footer";
+import TimelineSection from "./components/TimeLineSection";
 
 import ResearchPage from "./pages/ResearchPage";
 import DemonstrationPage from "./pages/DemonstrationPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import PeopleSection from "./components/PeopleSection";
 import RunRobotPage from "./pages/RunRobotPage";
-import MoveToDestination from "./pages/MoveToDestination"; // Import RunRobotPage
+import MoveToDestination from "./pages/MoveToDestination";
 
 function Navbar({ showNav }) {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +33,7 @@ function Navbar({ showNav }) {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    if (!showNav) return null; // Hide Navbar if showNav is false
+    if (!showNav) return null;
 
     return (
         <nav className={`main-nav ${isScrolled ? "scrolled" : ""}`}>
@@ -66,7 +71,7 @@ function Navbar({ showNav }) {
 }
 
 function AppContent() {
-    const location = useLocation(); // Correctly use useLocation inside Router
+    const location = useLocation();
     const [showNav, setShowNav] = useState(true);
 
     useEffect(() => {
@@ -81,17 +86,13 @@ function AppContent() {
                     <Route path="/" element={
                         <>
                             <HeroSection />
-                            <motion.section
-                                id="overview"
-                                className="overview"
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                            >
-                                <SystemArchitecture />
-                            </motion.section>
+                            <ProjectOverview />
+                            <TimelineSection />
+                            <FeaturesSection />
                             <AwardsSection />
+                            <TestimonialsSection />
                             <PeopleSection />
+                            <Footer />
                         </>
                     } />
                     <Route path="/research" element={<ResearchPage />} />

@@ -1,108 +1,129 @@
-import React, { useState} from "react";
-import "./DemonstrationPage.css";
+// DemonstrationPage.js
+import React from "react";
+import { Box, Typography, Grid, Button } from "@mui/material";
+import { motion } from "framer-motion";
 
-function DemonstrationPage() {
-    const [robotStatus, setRobotStatus] = useState("Idle");
-    const [metrics] = useState({
-        accuracy: 95,
-        efficiency: 88,
-        successRate: 92,
-    });
-
-    const handleAction = (action) => {
-        setRobotStatus(`Performing: ${action}`);
-        setTimeout(() => setRobotStatus("Idle"), 3000); // Reset after action
-    };
-
+const DemonstrationPage = () => {
     return (
-        <div className="demonstration-container">
-            {/* Hero Section */}
-            <section className="hero-demo">
-                <div className="hero-content">
-                    <h1>Experience FulBot in Action</h1>
-                    <p>Watch how FulBot performs real-world tasks with precision and intelligence.</p>
-                </div>
-                <div className="hero-video">
-                    <video autoPlay loop muted>
-                        <source src="/videos/demo.mp4" type="video/mp4" />
-                    </video>
-                </div>
-            </section>
+        <Box sx={{
+            minHeight: "100vh",
+            background: "linear-gradient(180deg, #1a1f2c 0%, #0a0e17 100%)",
+            color: "white",
+            padding: "80px 20px"
+        }}>
+            <Typography variant="h2" sx={{
+                textAlign: "center",
+                mb: 8,
+                fontWeight: "bold",
+                "&::after": {
+                    content: '""',
+                    display: "block",
+                    width: "60px",
+                    height: "4px",
+                    background: "#0072ff",
+                    margin: "20px auto"
+                }
+            }}>
+                Live Demonstrations
+            </Typography>
 
-            {/* Live Robot Feed */}
-            <section className="live-feed">
-                <h2>Live Robot Demonstration</h2>
-                <div className="feed-container">
-                    <img src="/images/live-feed-placeholder.jpg" alt="Live Feed" />
-                </div>
-            </section>
+            <Grid container spacing={6} justifyContent="center">
+                <Grid item xs={12} md={6}>
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <Box sx={{
+                            background: "linear-gradient(45deg, #0072ff33, #ffffff0a)",
+                            border: "1px solid #ffffff15",
+                            borderRadius: "15px",
+                            padding: "30px",
+                            height: "100%"
+                        }}>
+                            <video 
+                                controls 
+                                style={{
+                                    width: "100%",
+                                    borderRadius: "10px",
+                                    marginBottom: "20px"
+                                }}
+                            >
+                                <source src="/demo-video.mp4" type="video/mp4" />
+                            </video>
+                            <Typography variant="h5" sx={{ mb: 2, fontWeight: "bold" }}>
+                                Hospital Navigation Demo
+                            </Typography>
+                            <Typography variant="body1" sx={{ opacity: 0.9 }}>
+                                Real-world testing in hospital environment showing dynamic obstacle avoidance
+                                and human-aware navigation.
+                            </Typography>
+                        </Box>
+                    </motion.div>
+                </Grid>
 
-            {/* Robot Actions */}
-            <section className="robot-actions">
-                <h2>Control FulBot</h2>
-                <p>Status: <span className="robot-status">{robotStatus}</span></p>
-                <div className="action-buttons">
-                    <button onClick={() => handleAction("Navigate")}>Move to Location</button>
-                    <button onClick={() => handleAction("Greet")}>Greet Person</button>
-                    <button onClick={() => handleAction("Deliver Item")}>Deliver Object</button>
-                </div>
-            </section>
+                <Grid item xs={12} md={6}>
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <Box sx={{
+                            background: "linear-gradient(45deg, #0072ff33, #ffffff0a)",
+                            border: "1px solid #ffffff15",
+                            borderRadius: "15px",
+                            padding: "30px",
+                            height: "100%"
+                        }}>
+                            <div style={{
+                                position: "relative",
+                                paddingBottom: "56.25%", // 16:9
+                                height: 0,
+                                marginBottom: "20px"
+                            }}>
+                                <iframe
+                                    style={{
+                                        position: "absolute",
+                                        top: 0,
+                                        left: 0,
+                                        width: "100%",
+                                        height: "100%",
+                                        borderRadius: "10px"
+                                    }}
+                                    src="https://www.youtube.com/embed/demo"
+                                    frameBorder="0"
+                                    allowFullScreen
+                                />
+                            </div>
+                            <Typography variant="h5" sx={{ mb: 2, fontWeight: "bold" }}>
+                                Technical Deep Dive
+                            </Typography>
+                            <Typography variant="body1" sx={{ opacity: 0.9 }}>
+                                Detailed explanation of our motion planning framework and sensor fusion approach.
+                            </Typography>
+                        </Box>
+                    </motion.div>
+                </Grid>
+            </Grid>
 
-            {/* How It Works */}
-            <section className="how-it-works">
-                <h2>How FulBot Works</h2>
-                <div className="steps">
-                    <div className="step">
-                        <img src="/images/detect-human.png" alt="Detection" />
-                        <h3>Human Detection</h3>
-                        <p>Using AI-powered vision, FulBot detects and identifies humans in the environment.</p>
-                    </div>
-                    <div className="step">
-                        <img src="/images/activity-recognition.png" alt="Activity Recognition" />
-                        <h3>Activity Recognition</h3>
-                        <p>FulBot understands human actions to respond accordingly.</p>
-                    </div>
-                    <div className="step">
-                        <img src="/images/navigation.png" alt="Navigation" />
-                        <h3>Autonomous Navigation</h3>
-                        <p>Using LiDAR and mapping, FulBot moves safely and efficiently.</p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Performance Metrics */}
-            <section className="performance-metrics">
-                <h2>FulBot Performance</h2>
-                <div className="metrics-grid">
-                    <div className="metric">
-                        <h3>{metrics.accuracy}%</h3>
-                        <p>Recognition Accuracy</p>
-                    </div>
-                    <div className="metric">
-                        <h3>{metrics.efficiency}%</h3>
-                        <p>Operational Efficiency</p>
-                    </div>
-                    <div className="metric">
-                        <h3>{metrics.successRate}%</h3>
-                        <p>Task Success Rate</p>
-                    </div>
-                </div>
-            </section>
-
-            {/* User Testimonials */}
-            <section className="testimonials">
-                <h2>What People Say</h2>
-                <div className="testimonial">
-                    <p>"FulBot's interaction capabilities are impressive! It recognizes activities seamlessly."</p>
-                    <h4>- Dr. John Doe, AI Researcher</h4>
-                </div>
-                <div className="testimonial">
-                    <p>"The navigation is smooth and reliable. Great potential for hospital assistance!"</p>
-                    <h4>- Sarah Nguyen, Robotics Engineer</h4>
-                </div>
-            </section>
-        </div>
+            <Box sx={{ textAlign: "center", mt: 8 }}>
+                <Button 
+                    variant="contained" 
+                    size="large"
+                    sx={{
+                        background: "linear-gradient(45deg, #0072ff, #00c6ff)",
+                        fontSize: "1.2rem",
+                        px: 6,
+                        py: 1.5,
+                        borderRadius: "50px",
+                        textTransform: "none"
+                    }}
+                >
+                    View All Demos
+                </Button>
+            </Box>
+        </Box>
     );
-}
+};
 
 export default DemonstrationPage;

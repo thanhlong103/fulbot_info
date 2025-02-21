@@ -1,82 +1,134 @@
 import React from "react";
-import { Container, Grid, Card, CardContent, Typography, Avatar, IconButton } from "@mui/material";
 import { motion } from "framer-motion";
-import { LinkedIn, GitHub } from "@mui/icons-material";
+import { Box, Typography, Grid, Avatar, Link } from "@mui/material";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 import ThanhLong from "../images/ThanhLong.jpg"
-import DuongPhung from "../images/DuongPhung.jpg"
 import DucPhu from "../images/DucPhu.png"
 import TonThao from "../images/TonThao.jpg"
+import DuongPhung from "../images/DuongPhung.jpg"
+import { LocationSearching } from "@mui/icons-material";
 
-// Sample team data
 const teamMembers = [
     {
         name: "Nguyen Thanh Long",
-        role: "Co25 - Lead Developer",
+        role: "Robotics Developer, Web Developer",
+        bio: "Machine Learning expert focusing on computer vision and activity recognition systems. MSc in Artificial Intelligence.",
         image: ThanhLong,
-        linkedin: "https://www.linkedin.com/in/thanhlong103/",
-        github: "https://github.com/thanhlong103"
+        links: {
+            linkedin: "https://www.linkedin.com/in/thanhlong103/",
+            github: "https://github.com/thanhlong103"
+        }
     },
     {
-        name: "Nguyen Duc Phu",
-        role: "Co24 - Developer",
+        name: "Duc Phu",
+        role: "Robotics Developer",
+        bio: "Machine Learning expert focusing on computer vision and activity recognition systems. MSc in Artificial Intelligence.",
         image: DucPhu,
-        linkedin: "https://www.linkedin.com/in/ph%C3%BA-%C4%91%E1%BB%A9c-nguy%E1%BB%85n-39b7781a5/",
-        github: "https://github.com/phunguyenduc28"
+        links: {
+            linkedin: "https://www.linkedin.com/in/ph%C3%BA-%C4%91%E1%BB%A9c-nguy%E1%BB%85n-39b7781a5/",
+            github: "https://github.com/phunguyenduc28"
+        }
     },
     {
         name: "Ton Nu Thanh Thao",
-        role: "Co27 - Developing Assistant",
+        role: "Research Assistant",
+        bio: "Machine Learning expert focusing on computer vision and activity recognition systems. MSc in Artificial Intelligence.",
         image: TonThao,
-        linkedin: "https://www.linkedin.com/in/ton-nu-thanh-thao-b58b4924a/",
-        github: "https://github.com/thaoton1910"
+        links: {
+            linkedin: "https://www.linkedin.com/in/ton-nu-thanh-thao-b58b4924a/",
+            github: "https://github.com/thaoton1910"
+        }
     },
     {
         name: "Phung Manh Duong",
-        role: "Ph.D - Instructor",
+        role: "Intructor",
+        bio: "Machine Learning expert focusing on computer vision and activity recognition systems. MSc in Artificial Intelligence.",
         image: DuongPhung,
-        linkedin: "https://linkedin.com/in/emilydavis",
-        github: "https://github.com/emilydavis"
-    }
+        links: {
+            linkedin: "#",
+            github: "#"
+        }
+    },
 ];
 
 const PeopleSection = () => {
     return (
-        <Container id="people" sx={{ py: 8 }}>
-            <Typography variant="h4" align="center" gutterBottom fontWeight="bold">
-                Meet our Team
+        <Box sx={{
+            padding: "80px 20px",
+            background: "linear-gradient(180deg, #0a0e17 0%, #1a1f2c 100%)",
+            color: "white"
+        }}>
+            <Typography variant="h3" sx={{
+                textAlign: "center",
+                mb: 8,
+                fontWeight: "bold",
+                "&::after": {
+                    content: '""',
+                    display: "block",
+                    width: "60px",
+                    height: "4px",
+                    background: "#0072ff",
+                    margin: "20px auto"
+                }
+            }}>
+                Our Team
             </Typography>
-            <Grid container spacing={4} justifyContent="center">
+
+            <Grid container spacing={6} justifyContent="center">
                 {teamMembers.map((member, index) => (
-                    <Grid item key={index} xs={12} sm={6} md={4}>
+                    <Grid item xs={12} sm={6} md={4} key={index}>
                         <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
                         >
-                            <Card sx={{ textAlign: "center", p: 2, boxShadow: 4, borderRadius: 3 }}>
-                                <Avatar
-                                    src={member.image}
-                                    alt={member.name}
-                                    sx={{ width: 120, height: 120, mx: "auto", mb: 2 }}
+                            <Box sx={{
+                                background: "linear-gradient(45deg, #0072ff33, #ffffff0a)",
+                                border: "1px solid #ffffff15",
+                                borderRadius: "15px",
+                                padding: "30px",
+                                height: "100%",
+                                transition: "transform 0.3s ease",
+                                "&:hover": {
+                                    transform: "translateY(-10px)"
+                                }
+                            }}>
+                                <Avatar 
+                                    src={member.image} 
+                                    sx={{ 
+                                        width: 150, 
+                                        height: 150, 
+                                        mb: 3,
+                                        border: "3px solid #0072ff",
+                                        boxShadow: "0 0 20px rgba(0, 114, 255, 0.3)"
+                                    }} 
                                 />
-                                <CardContent>
-                                    <Typography variant="h6" fontWeight="bold">{member.name}</Typography>
-                                    <Typography variant="body1" color="text.secondary">{member.role}</Typography>
-                                    <div style={{ marginTop: 10 }}>
-                                        <IconButton component="a" href={member.linkedin} target="_blank" color="primary">
-                                            <LinkedIn />
-                                        </IconButton>
-                                        <IconButton component="a" href={member.github} target="_blank" color="inherit">
-                                            <GitHub />
-                                        </IconButton>
-                                    </div>
-                                </CardContent>
-                            </Card>
+                                <Typography variant="h5" sx={{ fontWeight: "bold", mb: 1 }}>
+                                    {member.name}
+                                </Typography>
+                                <Typography variant="subtitle1" sx={{ color: "#00c6ff", mb: 2 }}>
+                                    {member.role}
+                                </Typography>
+                                <Typography variant="body1" sx={{ mb: 3, opacity: 0.9 }}>
+                                    {member.bio}
+                                </Typography>
+                                <Box sx={{ display: "flex", gap: 2 }}>
+                                    <Link href={member.links.linkedin} target="_blank">
+                                        <LinkedInIcon sx={{ color: "#0077b5", fontSize: 30 }} />
+                                    </Link>
+                                    <Link href={member.links.github} target="_blank">
+                                        <GitHubIcon sx={{ color: "white", fontSize: 30 }} />
+                                    </Link>
+                                </Box>
+                            </Box>
                         </motion.div>
                     </Grid>
                 ))}
             </Grid>
-        </Container>
+        </Box>
     );
 };
 
