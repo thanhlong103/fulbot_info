@@ -1,0 +1,30 @@
+[
+    {
+        "title": "SOLIX autonomous navigation in Makerspace",
+        "videoSrc": "/videos/SOLIX-_first_run.mp4",
+        "description": "This is the first test run of SOLIX, my socially aware service robot, inside the Makerspace! 🚀 SOLIX is designed to navigate dynamic environments while considering human presence and movement. Using LiDAR, an RGB-D camera, and deep learning-based human activity recognition, it can detect people, estimate their states, and move accordingly. The goal is to develop a robot that can safely and intelligently assist in real-world social spaces.",
+        "features": [
+            "Autonomous navigation in a shared space"
+        ]
+    },
+    {
+        "title": "ICCRI Demo - Motion Planning & Sensor Fusion",
+        "videoSrc": "/videos/ICCRI_Demo.mp4",
+        "description": "This is our first-ever demonstration showcasing Socially Aware Motion Planning and Sensor Fusion for our paper at the International Conference on Control, Robotics, and Informatics 2024 (ICCRI)!",
+        "features": [
+            "LD-19 LiDAR for precise obstacle detection",
+            "D435i RGB-D camera for depth perception and human tracking",
+            "Jetson Orin NX 16GB for onboard processing"
+        ]
+    },
+    {
+        "title": "Group Detection",
+        "videoSrc": "/videos/Group_Detection.mp4",
+        "description": "In this demo, we showcase real-time group detection as part of our Socially Aware Motion Planning framework. The robot analyzes human positions and orientations to identify groups, helping it navigate more naturally in social environments.",
+        "features": [
+            "Human detection & tracking using RGB-D camera",
+            "D435i RGB-D camera for depth perception and human tracking",
+            "Group formation recognition based on spatial relationships"
+        ]
+    }
+]
