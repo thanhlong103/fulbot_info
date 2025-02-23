@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-    margin-top: 4%;
     position: relative;
     overflow: hidden;
     background: linear-gradient(135deg, #090e18 0%, #071e5a 100%);
@@ -17,12 +16,13 @@
   }
   
 .hero-content h1 {
-font-size: 4.5rem;
-line-height: 1.1;
-margin-bottom: 1.5rem;
-background: linear-gradient(30deg, #ff9a9e, #fad0c4);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    margin-top: 15%;
+    background: linear-gradient(30deg, #ff9a9e, #fad0c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .gradient-text {
@@ -36,7 +36,6 @@ background: linear-gradient(30deg, #ff9a9e, #fad0c4);
     color: rgba(255, 255, 255, 0.85);
     margin-bottom: 3rem;
     line-height: 1.6;
-    max-width: 80%;
 }
 
 .cta {
@@ -79,6 +78,7 @@ background: linear-gradient(30deg, #ff9a9e, #fad0c4);
     animation: float 4s ease-in-out infinite;
     z-index: 2;
     position: relative;
+    margin-top: 15%;
 }
 
 .robot-glow {
