@@ -4,14 +4,14 @@
     "author": "Thanh Long Nguyen, Duc Phu Nguyen, Thanh Thao Ton Nu, Manh Duong Phung",
     "year": 2025,
     "category": "Journal Article",
-    "link": "#"
+    "link": "https://drive.google.com/file/d/1csZs9LQuVvUZHxrZRp4SKeEWuFgwMLxK/view?usp=sharing"
   },
   {
     "title": "Real-time Recognition of Human Group Interaction for Socially Aware Robot Navigation ",
     "author": "Thanh Long Nguyen, Duc Phu Nguyen, Thanh Thao Ton Nu, Manh Duong Phung",
     "year": 2025,
     "category": "Journal Article",
-    "link": "#"
+    "link": "https://drive.google.com/file/d/1p8yxwdMGoeGWAH3f8m1Xm6J9qJujkqcL/view?usp=sharing"
   },
   {
     "title": "Socially Aware Motion Planning for Service Robots Using LiDAR and RGB-D Camera",
@@ -19,5 +19,12 @@
     "year": 2024,
     "category": "Conference",
     "link": "https://www.researchgate.net/publication/384928698_Socially_Aware_Motion_Planning_for_Service_Robots_Using_LiDAR_and_RGB-D_Camera"
+  },
+  {
+    "title": "Lightweight Vision-Based Framework for Real-Time Human Activity Detection in Service Robots",
+    "author": "Thanh Long Nguyen, Manh Duong Phung",
+    "year": 2024,
+    "category": "Capstone",
+    "link": "https://drive.google.com/file/d/1LsEkkkJ9yf8cmQUiLCXpBkNER9mbKJ5h/view?usp=sharing"
   }
 ]

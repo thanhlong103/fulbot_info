@@ -17,7 +17,99 @@
 .award-card {
     background: linear-gradient(45deg, #ffffff0a, #0072ff0d);
     border: 1px solid #ffffff15;
+    border-radius: 15px;.awards-section {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #1a1f2c 0%, #0a0e17 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.awards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.award-card {
+    background: linear-gradient(45deg, #ffffff0a, #0072ff0d);
+    border: 1px solid #ffffff15;
     border-radius: 15px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 280px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.award-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 114, 255, 0.3);
+}
+
+.award-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+.award-card h3 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.award-subtitle {
+    color: #ffffffaa;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.award-description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.award-btn {
+    color: #0072ff;
+    border-color: #0072ff;
+    font-size: 0.9rem;
+    text-transform: none;
+    transition: all 0.3s ease;
+}
+
+.award-btn:hover {
+    background: #0072ff;
+    color: white;
+}
+
+.award-glow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 114, 255, 0.1) 0%, transparent 70%);
+    filter: blur(40px);
+    top: -50px;
+    right: -50px;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .awards-section {
+        padding: 60px 20px;
+    }
+    
+    .award-card {
+        padding: 30px;
+    }
+}
+
     padding: 40px;
     position: relative;
     overflow: hidden;

@@ -1,7 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Typography } from "@mui/material";
+import { Typography, Button } from "@mui/material";
 import "./AwardsSection.css";
+
+const awards = [
+    {
+        title: "Best Paper Award",
+        subtitle: "ICCRI 2024",
+        description: "Awarded for outstanding research in human detection and computer vision at the ICCRI 2024 conference.",
+        icon: "🏆"
+    },
+    {
+        title: "Scholarships & Grants",
+        subtitle: "Supported by IDP grant and TP-bank scholarship",
+        description: "Received multiple scholarships and research grants for academic excellence and innovation.",
+        icon: "🚀"
+    }
+];
 
 const AwardSection = () => {
     return (
@@ -31,18 +46,7 @@ const AwardSection = () => {
             </motion.div>
 
             <div className="awards-container">
-                {[
-                    {
-                        title: "Best Paper Award",
-                        subtitle: "ICCRI 2024",
-                        icon: "🏆"
-                    },
-                    {
-                        title: "Scholarships & Grants",
-                        subtitle: "Supported by IDP grant and TP-bank scholarship",
-                        icon: "🚀"
-                    }
-                ].map((award, index) => (
+                {awards.map((award, index) => (
                     <motion.div
                         key={index}
                         className="award-card"
@@ -53,7 +57,15 @@ const AwardSection = () => {
                     >
                         <div className="award-icon">{award.icon}</div>
                         <h3>{award.title}</h3>
-                        <p>{award.subtitle}</p>
+                        <p className="award-subtitle">{award.subtitle}</p>
+                        <p className="award-description">{award.description}</p>
+                        <Button
+                            variant="outlined"
+                            className="award-btn"
+                            href="#" // Replace with an actual link or modal trigger
+                        >
+                            Learn More
+                        </Button>
                         <div className="award-glow"></div>
                     </motion.div>
                 ))}

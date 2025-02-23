@@ -2,25 +2,27 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 5%;
-    background: linear-gradient(135deg, #0a0e17 0%, #1a1f2c 100%);
+    justify-content: space-between;
+    padding: 0 10%;
+    margin-top: 4%;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(135deg, #090e18 0%, #071e5a 100%);
+    color: white;
 }
-
+  
 .hero-content {
     flex: 1;
-    max-width: 600px;
     z-index: 2;
-    position: relative;
-}
-
+  }
+  
 .hero-content h1 {
-    font-size: 4.5rem;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    color: #ffffff;
-    font-weight: 700;
+font-size: 4.5rem;
+line-height: 1.1;
+margin-bottom: 1.5rem;
+background: linear-gradient(30deg, #ff9a9e, #fad0c4);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .gradient-text {
@@ -73,7 +75,7 @@
 .robot-image {
     max-width: 80%;
     max-height: 80%;
-    filter: drop-shadow(0 0 30px rgba(0, 114, 255, 0.3));
+    filter: drop-shadow(0 0 30px rgba(0, 153, 255, 0.644));
     animation: float 4s ease-in-out infinite;
     z-index: 2;
     position: relative;
@@ -81,9 +83,9 @@
 
 .robot-glow {
     position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0, 114, 255, 0.15) 0%, transparent 60%);
+    width: 10%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(0, 153, 255, 0.644) 0%, transparent 60%);
     filter: blur(50px);
 }
 
