@@ -8,6 +8,16 @@
         ]
     },
     {
+        "title": "SOLIX autonomous navigation in Makerspace",
+        "videoSrc": "/videos/Simulation_video.mp4",
+        "description": "This simulation demonstrates our Socially Aware Motion Planning Framework, enabling robots to navigate human environments while respecting social interactions. Unlike traditional obstacle avoidance, our framework integrates human activity recognition and group interaction detection to ensure more natural and socially compliant movement.",
+        "features": [
+            "The robot detects and responds to human behaviors, such as walking while using a phone, by adjusting its path early to avoid disruptions.",
+            "The robot identifies social groups and ensures it does not cut through ongoing conversations or gatherings.",
+            "Instead of taking the shortest path, the robot dynamically recalculates routes to maintain social harmony."
+        ]
+    },
+    {
         "title": "ICCRI Demo - Motion Planning & Sensor Fusion",
         "videoSrc": "/videos/ICCRI_Demo.mp4",
         "description": "This is our first-ever demonstration showcasing Socially Aware Motion Planning and Sensor Fusion for our paper at the International Conference on Control, Robotics, and Informatics 2024 (ICCRI)!",
