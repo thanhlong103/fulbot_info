@@ -19,6 +19,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import PeopleSection from "./components/PeopleSection";
 import RunRobotPage from "./pages/RunRobotPage";
 import MoveToDestination from "./pages/MoveToDestination";
+import TeleoperationPage from "./pages/TeleoperationPage";
 
 function Navbar({ showNav }) {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -99,7 +100,8 @@ function AppContent() {
                     <Route path="/demonstration" element={<DemonstrationPage />} />
                     <Route path="/people" element={<AboutUsPage />} />
                     <Route path="/run-robot" element={<RunRobotPage />} />
-                    <Route path="/run-robot/move-to-destination" element={<MoveToDestination />} />
+                    <Route path="/run-robot/move-to-destination" element={<MoveToDestination />} />\
+                    <Route path="/run-robot/teleoperation" element={<TeleoperationPage />} />
                 </Routes>
             </AnimatePresence>
         </>

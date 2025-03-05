@@ -35,8 +35,8 @@ const RunRobotPage = () => {
                         📍 Move to Destination
                     </button>
 
-                    <button className="robot-button guide" onClick={() => console.log("Starting Makerspace Guide")}>
-                    🏭 Makerspace Guide
+                    <button className="robot-button guide" onClick={() => navigate("/run-robot/teleoperation")}>
+                        🏭 Teleoperation
                     </button>
                 </Box>
             </Box>

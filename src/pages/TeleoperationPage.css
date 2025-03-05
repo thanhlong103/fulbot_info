@@ -1,0 +1,254 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background: #0a0e14;
+    color: #ffffff;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    height: 100vh;
+    background: #0a0e14;
+    flex-direction: column;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 100%;
+    padding: 20px;
+    background: #1a1f29 !important;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.sidebar-title {
+    font-size: 1.6rem !important;
+    color: #6ae3fe !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Status Section */
+.status-section {
+    background: #252d3a;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.status-title {
+    color: #6ae3fe !important;
+    margin-bottom: 8px !important;
+}
+
+.status-text {
+    color: #8b95a1 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.4;
+}
+
+/* Velocity Log */
+.velocity-log {
+    background: #252d3a;
+    padding: 12px;
+    border-radius: 8px;
+    flex: 1; /* Allow log to expand */
+    overflow-y: auto; /* Scroll if log grows */
+}
+
+.log-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.log-entry {
+    color: #8b95a1 !important;
+    font-size: 0.85rem !important;
+}
+
+/* Control Area */
+.control-area {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #151a22;
+    padding: 20px;
+}
+
+.control-title {
+    color: #6ae3fe !important;
+    font-size: 2rem !important;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(106, 227, 254, 0.5);
+}
+
+/* Visualization Container */
+.visualization-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.gauge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gauge-title {
+    color: #6ae3fe !important;
+    font-size: 1rem !important;
+    margin-bottom: 10px;
+}
+
+.speedometer,
+.compass {
+    width: 120px;
+    height: 120px;
+    background: #252d3a;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.speedometer::before,
+.compass::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: #1a1f29;
+    bottom: 0;
+    left: 0;
+}
+
+.needle {
+    width: 2px;
+    height: 50%;
+    background: #6ae3fe;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(106, 227, 254, 0.7);
+}
+
+.gauge-value {
+    color: #8b95a1 !important;
+    font-size: 0.9rem !important;
+    margin-top: 10px;
+}
+
+/* Keypad */
+.keypad {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.key-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.key {
+    width: 80px;
+    height: 80px;
+    background: #252d3a;
+    color: #8b95a1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.key.active {
+    background: #6ae3fe;
+    color: #0a0e14;
+    box-shadow: 0 0 20px rgba(106, 227, 254, 0.7);
+    transform: scale(1.1);
+}
+
+.key.stop {
+    width: 100px;
+    background: #ff6b6b;
+    color: #ffffff;
+}
+
+.key.stop.active {
+    background: #ff8787;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.7);
+}
+
+/* Instructions */
+.instructions {
+    background: rgba(37, 45, 58, 0.8);
+    padding: 12px 24px;
+    border-radius: 8px;
+}
+
+.instruction-text {
+    color: #8b95a1 !important;
+    font-size: 1rem !important;
+    text-align: center;
+}
+
+/* Divider */
+.divider {
+    background: #2d3746 !important;
+    margin: 12px 0 !important;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 25%;
+    }
+
+    .control-area {
+        width: 75%;
+    }
+
+    .control-title {
+        font-size: 2.5rem !important;
+    }
+
+    .speedometer,
+    .compass {
+        width: 150px;
+        height: 150px;
+    }
+}
