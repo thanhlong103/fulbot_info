@@ -16,15 +16,14 @@ const TeleoperationPage = () => {
         d: false,
         x: false,
     });
-    const [linearVelocity, setLinearVelocity] = useState(0.0); // Current linear velocity (m/s)
-    const [angularVelocity, setAngularVelocity] = useState(0.0); // Current angular velocity (rad/s)
-    const [velocityLog, setVelocityLog] = useState([]); // Log of velocity changes
+    const [linearVelocity, setLinearVelocity] = useState(0.0);
+    const [angularVelocity, setAngularVelocity] = useState(0.0);
+    const [velocityLog, setVelocityLog] = useState([]);
     const navigate = useNavigate();
 
-    // ROS2 Connection Setup
     useEffect(() => {
         const rosConnection = new ROSLIB.Ros({
-            url: "ws://localhost:9090",
+            url: "ws://10.212.17.79:9090", // ROS2 on the same machine
         });
 
         rosConnection.on("connection", () => {
