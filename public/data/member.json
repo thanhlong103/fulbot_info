@@ -1,7 +1,7 @@
 [
     {
         "name": "Nguyen Thanh Long",
-        "role": "Robotics Developer, Web Developer",
+        "role": "Leader, Robotics Developer, Web Developer",
         "bio": "Co25 Student",
         "image": "/images/ThanhLong.jpg",
         "links": {
@@ -22,7 +22,7 @@
     {
         "name": "Nguyen Le Na",
         "role": "Research Assistant",
-        "bio": "Co26",
+        "bio": "Co26 Student",
         "image": "/images/LeNa.jpg",
         "links": {
             "linkedin": "https://www.linkedin.com/in/lee-na-nguyen/",
