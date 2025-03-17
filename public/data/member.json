@@ -20,6 +20,16 @@
         }
     },
     {
+        "name": "Nguyen Le Na",
+        "role": "Research Assistant",
+        "bio": "Co26",
+        "image": "/images/LeNa.jpg",
+        "links": {
+            "linkedin": "https://www.linkedin.com/in/lee-na-nguyen/",
+            "github": "https://github.com/nanaaaiya"
+        }
+    },
+    {
         "name": "Ton Nu Thanh Thao",
         "role": "Research Assistant",
         "bio": "Co27 Student",
